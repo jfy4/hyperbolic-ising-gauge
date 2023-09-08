@@ -23,6 +23,9 @@ std::uniform_int_distribution<int> dist1(0,1); // distribution in range [0, 1]
 
 class Lattice
 {
+  // The lattice class.  This houses the link variables
+  // as well as the neighbors and connectivity info.
+  
   // vector containers 
   std::map<int, std::vector<std::vector<int> > > staples;
   std::vector<int> plaq;
@@ -116,7 +119,7 @@ Lattice::Lattice(std::vector<std::vector<int> > &plaq_vec,
 
 void Lattice::metro_update(int edge_idx)
 {
-  
+  // The metropolis update
   current_spin = edges[edge_idx];
   
   staple_sum = 0;
@@ -162,7 +165,7 @@ void Lattice::metro_update(int edge_idx)
 
 void Lattice::hb_update(int edge_idx)
 {
-  
+  // the heatbath update
   current_spin = edges[edge_idx];
   
   staple_sum = 0;

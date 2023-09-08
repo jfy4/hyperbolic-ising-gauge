@@ -15,7 +15,7 @@
 
 int main(int argc, char const *argv[])
 {
-  
+
   double beta = atof(argv[1]);
   bool load = true;
   std::string sbeta;
