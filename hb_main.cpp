@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 {
   
   double beta = atof(argv[1]);
-  bool load = false;
+  bool load = true;
   std::string sbeta;
   std::string outname;
   std::string L = "18";
@@ -50,8 +50,8 @@ int main(int argc, char const *argv[])
   
   if (load)
     {
-      lat.load_config("./hb_b0p7/hb_b0.700000_l5_c10500.txt");
-      sweep_count = 10500;
+      lat.load_config("./hb_b2p0/L18/hb_b2p0_l18_c54800.txt");
+      sweep_count = 54800;
       sweep_count += 1;
     }
   else
